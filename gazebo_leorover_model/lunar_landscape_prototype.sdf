@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<sdf version='1.9'>
+  <world name='lunar_landscape'>
+
+    <scene>
+        <ambient>0.4 0.4 0.4 0.4</ambient>          <!-- Has no effect -->
+        <background>0.0 0.0 0.0 1.0</background>    <!-- Has no effect -->
+        <shadows>1</shadows>                        <!-- Has no effect -->
+        <grid>0</grid>
+    </scene>
+
+    <!--         -->
+    <!-- Gravity -->
+    <!--         -->
+    <!-- <gravity>0 0 -1.62</gravity> -->
+    <!-- Lowers friction and makes robot turn less good -->
+
+
+    <!--         -->
+    <!-- Physics -->
+    <!--         -->
+    <physics name="1ms" type="ignored">
+        <max_step_size>0.001</max_step_size>
+        <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <!--         -->
+    <!-- Plugins -->
+    <!--         -->
+    <plugin
+        filename="gz-sim-physics-system"
+        name="gz::sim::systems::Physics">
+    </plugin>
+    <!-- <plugin
+        filename="gz-sim-user-commands-system"
+        name="gz::sim::systems::UserCommands">
+    </plugin> -->
+    <plugin
+        filename="gz-sim-scene-broadcaster-system"
+        name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+
+    <plugin filename="gz-sim-imu-system"
+        name="gz::sim::systems::Imu">
+    </plugin>
+
+    <plugin
+        filename="gz-sim-sensors-system"
+        name="gz::sim::systems::Sensors">
+        <render_engine>ogre2</render_engine>
+    </plugin>
+
+    
+    <!--              -->
+    <!-- Illumination -->
+    <!--              -->
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0.9 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.3 0.3 -0.9</direction>
+    </light>
+
+    <!--        -->
+    <!-- Models -->
+    <!--        -->
+
+    <!-- Ground -->
+    <model name="lunar_ground_plane">
+      <static>true</static>
+      <pose>-35 5 -6.7 0 0 0</pose>
+      <link name='lunar_ground_plane'>
+        <collision name="lunar_ground_plane_collision">
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <scale>1 1 1</scale>
+                <uri>../environment_models/lunar_proto_landscape_v002.dae</uri>
+            </mesh>
+            </geometry>
+        </collision>
+        <visual name='lunar_ground_plane_visual'>
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <scale>1 1 1</scale>
+                <uri>../environment_models/lunar_proto_landscape_v002.dae</uri>
+            </mesh>
+            </geometry>
+        </visual>
+      </link>
+    </model>
+
+
+    <!-- Sky -->
+    <model name="black_sky">
+      <static>true</static>
+      <pose>0 0 -12.0 0 0 0</pose>
+      <link name='black_sky_link'>
+        <visual name='black_sky_visual'>
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <scale>1 1 1</scale>
+                <uri>../environment_models/black_sky.dae</uri>
+            </mesh>
+            </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Robot -->
+    <include>
+        <!-- <uri>./leorover.sdf</uri> -->
+        <uri>/home/leo/gazebo_leorover_model/leorover.sdf</uri>
+    </include>
+    
+    <!-- 
+    rover can be spawned with the following line:
+    gz service -s /world/empty/create \
+      --reqtype gz.msgs.EntityFactory \
+      --reptype gz.msgs.Boolean \
+      --timeout 1000 \
+      --req 'sdf_filename: "./leorover.sdf", name: "leorover"'
+     -->
+
+
+  </world>
+</sdf>

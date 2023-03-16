@@ -1,0 +1,548 @@
+<sdf version='1.10'>
+  <model name='leo'>
+    <link name='base_footprint'>
+      <inertial>
+        <pose>-0.015871957263921981 0.004979034621767164 0.16780482000205191 0 0 0</pose>
+        <mass>6.7329029999999994</mass>
+        <inertia>
+          <ixx>0.1494731627205885</ixx>
+          <ixy>0.015397655172560989</ixy>
+          <ixz>0.0071834664034111338</ixz>
+          <iyy>0.1932541638102116</iyy>
+          <iyz>-0.0002838753135357636</iyz>
+          <izz>0.21706910791605441</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_footprint_fixed_joint_lump__base_link_collision'>
+        <pose>0 0 0.19783000000000001 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/Chassis_outline.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__antenna_link_collision_1'>
+        <pose>-0.0051999999999999998 0.056000000000000001 0.21933 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.056000000000000001</length>
+            <radius>0.0054999999999999997</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__makita_battery_mount_collision_2'>
+        <pose>-0.089999999999999997 0 0.25783 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.14999999999999999 0.14999999999999999 0.12</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__makita_battery_adapter_collision_3'>
+        <pose>-0.089999999999999997 0 0.22483 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.089999999999999997 0.070000000000000007 0.025000000000000001</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__makita_battery_collision_4'>
+        <pose>-0.095000000000000001 0 0.25783 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.10000000000000001 0.080000000000000002 0.040000000000000001</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__xavier_mount_collision_5'>
+        <pose>-0.094 0 0.35782999999999998 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.10000000000000001 0.12 0.080000000000000002</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__mast_link_collision_6'>
+        <pose>0.024999999999999991 0 0.29682999999999998 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.20000000000000001</length>
+            <radius>0.025000000000000001</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__realsense_camera_link_collision_7'>
+        <pose>0.090053449859276685 0 0.43688038344826519 0 0.34900000000000003 0</pose>
+        <geometry>
+          <box>
+            <size>0.025194999999999999 0.124 0.029000000000000001</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__mikrotik_antenna_link_collision_8'>
+        <pose>-0.0050000000000000036 0.029999999999999999 0.30682999999999999 0 0 -0.78539816339744839</pose>
+        <geometry>
+          <cylinder>
+            <length>0.16</length>
+            <radius>0.025000000000000001</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__mikrotik_antenna_link_collision_9'>
+        <pose>-0.0050000000000000036 0.029999999999999999 0.45683000000000001 0 0 -0.78539816339744839</pose>
+        <geometry>
+          <cylinder>
+            <length>0.29999999999999999</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__rocker_L_link_collision_10'>
+        <pose>0.00263 0.14166999999999999 0.15051999999999999 0 0 3.1415926535897931</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/Rocker_outline.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__rocker_R_link_collision_11'>
+        <pose>0.00263 -0.14166999999999999 0.15051999999999999 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/Rocker_outline.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__rp_lidar_mount_collision_12'>
+        <pose>0.1075 0 0.20583000000000001 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.12 0.17999999999999999 0.016</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_footprint_fixed_joint_lump__rp_lidar_collision_13'>
+        <pose>0.1275 0 0.23283000000000001 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.040000000000000001</length>
+            <radius>0.040000000000000001</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='base_footprint_fixed_joint_lump__base_link_visual'>
+        <pose>0 0 0.19783000000000001 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/Chassis.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__antenna_link_visual_1'>
+        <pose>-0.0051999999999999998 0.056000000000000001 0.19133 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/Antenna.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__makita_battery_mount_visual_2'>
+        <pose>-0.089999999999999997 0 0.19783000000000001 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/model_extensions/makita_battery_mount.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__makita_battery_adapter_visual_3'>
+        <pose>-0.089999999999999997 0 0.21282999999999999 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/model_extensions/makita_battery_adapter.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__makita_battery_visual_4'>
+        <pose>-0.095000000000000001 0 0.28283000000000003 3.1415926535897931 1.224646799147353e-16 3.1415926535897931</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/model_extensions/makita_battery.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__xavier_mount_visual_5'>
+        <pose>-0.104 0 0.31783 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/model_extensions/xavier_mount.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__mast_link_visual_6'>
+        <pose>0.030999999999999989 0 0.19683 0 0 -1.5707963267948959</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/model_extensions/long_camera_mast.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__camera_mount_link_visual_7'>
+        <pose>0.026499999999999999 0 0.36682999999999999 0 0 1.5707963267948959</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/model_extensions/camera_mount_fixed_angle_20_degrees_v1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__realsense_camera_link_visual_8'>
+        <pose>0.090053449859276685 0 0.43688038344826519 1.919796326794897 0 1.5707963267948959</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/model_extensions/d455.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__mikrotik_antenna_link_visual_9'>
+        <pose>-0.0050000000000000036 0.029999999999999999 0.22683 0 0 0.78539816339744828</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/model_extensions/mikrotik_antenna.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__rocker_L_link_visual_10'>
+        <pose>0.00263 0.14166999999999999 0.15051999999999999 0 0 3.1415926535897931</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/Rocker.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__rocker_R_link_visual_11'>
+        <pose>0.00263 -0.14166999999999999 0.15051999999999999 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/Rocker.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__rp_lidar_mount_visual_12'>
+        <pose>0.077499999999999999 0 0.19783000000000001 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/model_extensions/rp_lidar_mount.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_footprint_fixed_joint_lump__rp_lidar_visual_13'>
+        <pose>0.1275 0 0.21282999999999999 0 0 -1.5707963267948959</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/model_extensions/rp_lidar.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='wheel_FL_joint' type='revolute'>
+      <pose relative_to='base_footprint'>0.15518999999999999 0.22381000000000001 0.0625 0 0 3.1415926535897931</pose>
+      <parent>base_footprint</parent>
+      <child>wheel_FL_link</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <effort>2</effort>
+          <velocity>6</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <damping>0.10000000000000001</damping>
+          <friction>0.3125</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_FL_link'>
+      <pose relative_to='wheel_FL_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0.030026000000000001 0 0 0 0</pose>
+        <mass>0.28364200000000001</mass>
+        <inertia>
+          <ixx>0.00039100000000000002</ixx>
+          <ixy>1.2396200000000001e-06</ixy>
+          <ixz>5.5258200000000004e-07</ixz>
+          <iyy>0.00047160000000000002</iyy>
+          <iyz>-2.082042e-06</iyz>
+          <izz>0.00039100000000000002</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_FL_link_collision'>
+        <pose>0 0.044850000000000001 0 1.5707963267948959 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.070000000000000007</length>
+            <radius>0.057000000000000002</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='wheel_FL_link_collision_1'>
+        <pose>0 0.044850000000000001 0 1.5707963267948959 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.040000000000000001</length>
+            <radius>0.0625</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='wheel_FL_link_collision_2'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/Wheel_outline.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel_FL_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/WheelA.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='wheel_RL_joint' type='revolute'>
+      <pose relative_to='base_footprint'>-0.14993000000000001 0.22381000000000001 0.0625 0 0 3.1415926535897931</pose>
+      <parent>base_footprint</parent>
+      <child>wheel_RL_link</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <effort>2</effort>
+          <velocity>6</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <damping>0.10000000000000001</damping>
+          <friction>0.3125</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_RL_link'>
+      <pose relative_to='wheel_RL_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0.030026000000000001 0 0 0 0</pose>
+        <mass>0.28364200000000001</mass>
+        <inertia>
+          <ixx>0.00039100000000000002</ixx>
+          <ixy>1.2396200000000001e-06</ixy>
+          <ixz>5.5258200000000004e-07</ixz>
+          <iyy>0.00047160000000000002</iyy>
+          <iyz>-2.082042e-06</iyz>
+          <izz>0.00039100000000000002</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_RL_link_collision'>
+        <pose>0 0.044850000000000001 0 1.5707963267948959 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.070000000000000007</length>
+            <radius>0.057000000000000002</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='wheel_RL_link_collision_1'>
+        <pose>0 0.044850000000000001 0 1.5707963267948959 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.040000000000000001</length>
+            <radius>0.0625</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='wheel_RL_link_collision_2'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/Wheel_outline.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel_RL_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/WheelA.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='wheel_FR_joint' type='revolute'>
+      <pose relative_to='base_footprint'>0.15518999999999999 -0.22381000000000001 0.0625 0 0 0</pose>
+      <parent>base_footprint</parent>
+      <child>wheel_FR_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>2</effort>
+          <velocity>6</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <damping>0.10000000000000001</damping>
+          <friction>0.3125</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_FR_link'>
+      <pose relative_to='wheel_FR_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0.030026000000000001 0 0 0 0</pose>
+        <mass>0.28364200000000001</mass>
+        <inertia>
+          <ixx>0.00039100000000000002</ixx>
+          <ixy>1.2396200000000001e-06</ixy>
+          <ixz>5.5258200000000004e-07</ixz>
+          <iyy>0.00047160000000000002</iyy>
+          <iyz>-2.082042e-06</iyz>
+          <izz>0.00039100000000000002</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_FR_link_collision'>
+        <pose>0 0.044850000000000001 0 1.5707963267948959 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.070000000000000007</length>
+            <radius>0.057000000000000002</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='wheel_FR_link_collision_1'>
+        <pose>0 0.044850000000000001 0 1.5707963267948959 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.040000000000000001</length>
+            <radius>0.0625</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='wheel_FR_link_collision_2'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/Wheel_outline.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel_FR_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/WheelB.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='wheel_RR_joint' type='revolute'>
+      <pose relative_to='base_footprint'>-0.14993000000000001 -0.22381000000000001 0.0625 0 0 0</pose>
+      <parent>base_footprint</parent>
+      <child>wheel_RR_link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>2</effort>
+          <velocity>6</velocity>
+          <lower>-inf</lower>
+          <upper>inf</upper>
+        </limit>
+        <dynamics>
+          <damping>0.10000000000000001</damping>
+          <friction>0.3125</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='wheel_RR_link'>
+      <pose relative_to='wheel_RR_joint'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0.030026000000000001 0 0 0 0</pose>
+        <mass>0.28364200000000001</mass>
+        <inertia>
+          <ixx>0.00039100000000000002</ixx>
+          <ixy>1.2396200000000001e-06</ixy>
+          <ixz>5.5258200000000004e-07</ixz>
+          <iyy>0.00047160000000000002</iyy>
+          <iyz>-2.082042e-06</iyz>
+          <izz>0.00039100000000000002</izz>
+        </inertia>
+      </inertial>
+      <collision name='wheel_RR_link_collision'>
+        <pose>0 0.044850000000000001 0 1.5707963267948959 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.070000000000000007</length>
+            <radius>0.057000000000000002</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='wheel_RR_link_collision_1'>
+        <pose>0 0.044850000000000001 0 1.5707963267948959 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.040000000000000001</length>
+            <radius>0.0625</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='wheel_RR_link_collision_2'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/Wheel_outline.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='wheel_RR_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/leo/gazebo_leorover_model/models/WheelB.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
