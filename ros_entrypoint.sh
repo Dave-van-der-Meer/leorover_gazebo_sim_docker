@@ -4,7 +4,7 @@ set -e
 
 export ROS2_INSTALL_PATH="/opt/ros/humble"
 export ROS_NAMESPACE="leo_sim"
-export ROS_DOMAIN_ID=55
+export ROS_DOMAIN_ID=${ROS_DOMAIN_ID}
 
 cd /home/leo/ros2_ws
 

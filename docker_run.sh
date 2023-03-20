@@ -24,6 +24,7 @@ docker run \
     --ipc host \
     --privileged \
     --env="DISPLAY" \
+    --env ROS_DOMAIN_ID=${ROS_DOMAIN_ID} \
     --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
     --volume ./gazebo_leorover_model:/home/leo/gazebo_leorover_model \
     --volume ./environment_models:/home/leo/environment_models \
