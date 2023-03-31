@@ -30,8 +30,8 @@ docker run \
     --device /dev/dri/renderD128:/dev/dri/renderD128 \
     --device /dev/dri/renderD129:/dev/dri/renderD129 \
     --name leo_classic_gazebo \
-    local/leorover_classic_gazebo:humble 
-    # ros2 launch leorover_gazebo leorover_gazebo_sim.launch.py
+    local/leorover_classic_gazebo:humble \
+    ros2 launch leorover_gazebo leorover_gazebo_sim.launch.py
     # --volume ./gazebo_leorover_model:/home/leo/gazebo_leorover_model \
     # --volume ./environment_models:/home/leo/environment_models \
 

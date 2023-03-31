@@ -6,7 +6,7 @@
   <xacro:arg name="robot_ns" default=""/>
 
   <xacro:include filename="$(find leorover_description)/urdf/macros.xacro"/>
-  <xacro:include filename="$(find leorover_description)/urdf/mast.xacro"/>
+  <!-- <xacro:include filename="$(find leorover_description)/urdf/mast.xacro"/> -->
 
   <xacro:leo_sim robot_ns="$(arg robot_ns)"
                  fixed="$(arg fixed)"/>

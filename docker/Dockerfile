@@ -18,16 +18,8 @@ RUN apt update && \
     ros-$ROS_VERSION-xacro \
     ros-$ROS_VERSION-controller-manager \
     vim
+RUN apt install -y python3-pip && pip install setuptools==58.2.0
 
-# Install Gazebo Garden (binary install: https://gazebosim.org/docs/garden/install_ubuntu)
-# RUN wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
-# RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
-# RUN apt update && \
-#     ros-cmake-modules \
-#     libgflags-dev \
-#     python3-pip && \
-#     pip install setuptools==58.2.0
-    
 
 # Clean up apt package list
 RUN rm -rf /var/lib/apt/lists/*
