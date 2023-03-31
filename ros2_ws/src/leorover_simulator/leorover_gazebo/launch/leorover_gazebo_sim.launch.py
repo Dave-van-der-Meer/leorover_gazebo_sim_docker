@@ -6,7 +6,7 @@ from launch.substitutions import LaunchConfiguration
 
 
 def generate_launch_description():
-    pkg_share = get_package_share_directory("leo_gazebo")
+    pkg_share = get_package_share_directory("leorover_gazebo")
     gazebo_ros_share = get_package_share_directory("gazebo_ros")
 
     return LaunchDescription(
@@ -49,7 +49,7 @@ def generate_launch_description():
             ),
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(
-                    [pkg_share, "/launch/spawn_robot.launch.py"]
+                    [pkg_share, "/launch/leorover_spawn_robot.launch.py"]
                 )
             ),
         ]

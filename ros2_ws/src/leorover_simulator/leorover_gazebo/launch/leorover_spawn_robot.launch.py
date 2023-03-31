@@ -61,13 +61,13 @@ def generate_launch_description():
             Node(
                 name="joint_state_broadcaster_spawner",
                 package="controller_manager",
-                executable="spawner.py",
+                executable="spawner",
                 arguments=["joint_state_broadcaster"],
             ),
             Node(
                 name="diff_drive_controller_spawner",
                 package="controller_manager",
-                executable="spawner.py",
+                executable="spawner",
                 arguments=["diff_drive_controller"],
             ),
         ]

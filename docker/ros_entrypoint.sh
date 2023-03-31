@@ -13,6 +13,6 @@ source "/opt/ros/humble/setup.bash"
 colcon build --symlink-install
 source "/home/leo/ros2_ws/install/setup.bash"
 
-cd /home/leo/gazebo_leorover_model
+cd /home/leo/
 
 exec "$@"
