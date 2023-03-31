@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+       name="leo">
+
+  <xacro:include filename="$(find leorover_description)/urdf/macros.xacro"/>
+  <xacro:include filename="$(find leorover_description)/urdf/mast.xacro"/>
+  <xacro:leo_mast/>
+
+  <xacro:leo/>
+
+</robot>
