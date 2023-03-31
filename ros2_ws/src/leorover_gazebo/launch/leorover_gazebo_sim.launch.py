@@ -1,72 +1,56 @@
-import os
-from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, SetEnvironmentVariable, IncludeLaunchDescription
-from launch.substitutions import LaunchConfiguration
-from launch_ros.actions import Node
-from launch.launch_description_sources import PythonLaunchDescriptionSource
 from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
+
 
 def generate_launch_description():
+    pkg_share = get_package_share_directory("leo_gazebo")
+    gazebo_ros_share = get_package_share_directory("gazebo_ros")
 
-    pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
-
-    gz_sim = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py')),
-        launch_arguments={
-            'gz_args': '-r /home/leo/gazebo_leorover_model/lunar_landscape_prototype.sdf'
-        }.items(),
+    return LaunchDescription(
+        [
+            DeclareLaunchArgument(
+                name="world",
+                default_value="",
+                description="Path to the world file for gazebo",
+            ),
+            DeclareLaunchArgument(
+                name="paused",
+                default_value="false",
+                description='Set to "true" to start gazebo server in a paused state.',
+            ),
+            DeclareLaunchArgument(
+                name="gui",
+                default_value="true",
+                description='Set to "false" to run Gazebo headless.',
+            ),
+            DeclareLaunchArgument(name="debug", default_value="false"),
+            DeclareLaunchArgument(
+                name="verbose",
+                default_value="false",
+                description='Set to "true" to increase messages written to terminal.',
+            ),
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(
+                    [
+                        gazebo_ros_share,
+                        "/launch/gazebo.launch.py",
+                    ]
+                ),
+                launch_arguments={
+                    "world": LaunchConfiguration("world"),
+                    "pause": LaunchConfiguration("paused"),
+                    "gui": LaunchConfiguration("gui"),
+                    "gdb": LaunchConfiguration("debug"),
+                    "verbose": LaunchConfiguration("verbose"),
+                }.items(),
+            ),
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(
+                    [pkg_share, "/launch/spawn_robot.launch.py"]
+                )
+            ),
+        ]
     )
-
-    spawn = Node(package='ros_gz_sim', executable='create',
-                 arguments=[
-                    '-name', 'leorover',
-                    '-x', '0.0',
-                    '-z', '0.0',
-                    '-Y', '0.0',
-                    '-file', '/home/leo/gazebo_leorover_model/leorover.sdf'],
-                 output='screen')
-
-
-    parameters=[]
-    arguments=[
-        '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
-        '/model/leorover/odometry@nav_msgs/msg/Odometry]gz.msgs.Odometry',
-        '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
-        '/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
-        '/imu@sensor_msgs/msg/Imu[gz.msgs.IMU',
-        '/body_camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
-        '/body_camera/image@sensor_msgs/msg/Image[gz.msgs.Image',
-        '/realsense_d455/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
-        '/realsense_d455/image@sensor_msgs/msg/Image[gz.msgs.Image',
-        '/realsense_d455/depth_image@sensor_msgs/msg/Image[gz.msgs.Image',
-        '/model/leorover/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
-    ]
-
-    remappings=[
-        ('/clock', '/leo/clock'),
-        ('/model/leorover/odometry', '/leo/odometry'),
-        ('/cmd_vel', '/cmd_vel'),
-        ('/scan', '/leo/scan'),
-        ('/imu', '/leo/imu'),
-        ('/body_camera/camera_info', '/leo/body_camera/camera_info'),
-        ('/body_camera/image', '/leo/body_camera/image'),
-        ('/realsese_d455/camera_info', '/leo/realsese_d455/camera_info'),
-        ('/realsese_d455/image', '/leo/realsese_d455/image'),
-        ('/realsese_d455/depth_image', '/leo/realsese_d455/depth_image'),
-        ('/model/leorover/tf','/tf')
-    ]
-
-    bridge = Node(
-        package='ros_gz_bridge', 
-        executable='parameter_bridge', 
-        output='screen',
-        arguments=arguments,
-        remappings=remappings)
-
-    return LaunchDescription([
-        gz_sim,
-        # spawn,
-        bridge,
-        ])
-    

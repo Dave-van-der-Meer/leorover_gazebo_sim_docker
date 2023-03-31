@@ -25,6 +25,7 @@ Then, clone this repository:
 
 ```shell-session
 $ git clone https://github.com/Dave-van-der-Meer/leorover_gazebo_sim_docker.git
+$ git checkout classic_gazebo_humble
 $ cd leorover_gazebo_sim_docker
 ```
 
