@@ -899,5 +899,17 @@
         <odom_publish_frequency>1</odom_publish_frequency>
         <topic>cmd_vel</topic>
     </plugin>
+
+    <plugin
+      filename="gz-sim-joint-state-publisher-system"
+      name="gz::sim::systems::JointStatePublisher">
+    </plugin>
+
+    <!-- <plugin
+        filename="ignition-gazebo-joint-state-publisher-system"
+        name="ignition::gazebo::systems::JointStatePublisher">
+    </plugin> -->
+
+
   </model>
 </sdf>

@@ -1,0 +1,8 @@
+source;share/leorover_description/hook/cmake_prefix_path.ps1
+source;share/leorover_description/hook/cmake_prefix_path.dsv
+source;share/leorover_description/hook/cmake_prefix_path.sh
+source;share/leorover_description/local_setup.bash
+source;share/leorover_description/local_setup.dsv
+source;share/leorover_description/local_setup.ps1
+source;share/leorover_description/local_setup.sh
+source;share/leorover_description/local_setup.zsh

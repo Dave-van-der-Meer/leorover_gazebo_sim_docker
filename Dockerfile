@@ -24,6 +24,7 @@ RUN apt update && \
     libgflags-dev \
     ros-$ROS_VERSION-gps-msgs \
     ros-$ROS_VERSION-image-transport \
+    ros-$ROS_VERSION-xacro \
     python3-pip && \
     pip install setuptools==58.2.0
     
@@ -42,6 +43,7 @@ WORKDIR /home/leo
 RUN mkdir -p /home/leo/ros2_ws/src/
 WORKDIR /home/leo/ros2_ws/src/
 RUN git clone https://github.com/gazebosim/ros_gz.git
+RUN git clone https://github.com/ros/sdformat_urdf.git
 WORKDIR /home/leo/ros2_ws/
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash; colcon build --symlink-install --executor sequential"
 

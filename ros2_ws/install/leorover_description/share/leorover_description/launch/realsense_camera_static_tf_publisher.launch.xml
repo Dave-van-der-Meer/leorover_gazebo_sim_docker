@@ -1,0 +1,8 @@
+<launch>
+
+  <arg name="robot_namespace" default="leo0X"/>
+  <node pkg="tf2_ros" 
+        exec="static_transform_publisher" 
+        args="0 0 0 0 0 0 $(var robot_namespace)/realsense_camera_link realsense_camera_$(var robot_namespace)_link"/>
+
+</launch>

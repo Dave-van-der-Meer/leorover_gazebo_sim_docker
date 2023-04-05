@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info
+writing ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/PKG-INFO
+writing dependency_links to ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/dependency_links.txt
+writing entry points to ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/entry_points.txt
+writing requirements to ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/requires.txt
+writing top-level names to ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/top_level.txt
+writing manifest file '../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/SOURCES.txt'
+reading manifest file '../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/SOURCES.txt'
+writing manifest file '../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build
+creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build/lib
+creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build/lib/leorover_gazebo_bridge
+copying leorover_gazebo_bridge/__init__.py -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build/lib/leorover_gazebo_bridge
+running install
+running install_lib
+creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages/leorover_gazebo_bridge
+copying /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build/lib/leorover_gazebo_bridge/__init__.py -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages/leorover_gazebo_bridge
+byte-compiling /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages/leorover_gazebo_bridge/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/ament_index
+creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/ament_index/resource_index
+creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/ament_index/resource_index/packages
+copying resource/leorover_gazebo_bridge -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/ament_index/resource_index/packages
+copying package.xml -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge
+creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/launch
+copying launch/leorover_gazebo_sim.launch.py -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/launch
+copying launch/leorover_gazebo_bridge.launch.py -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/launch
+copying launch/ros2_control_demo.launch.py -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/launch
+running install_egg_info
+Copying ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info to /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages/leorover_gazebo_bridge-0.0.1-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/install.log'

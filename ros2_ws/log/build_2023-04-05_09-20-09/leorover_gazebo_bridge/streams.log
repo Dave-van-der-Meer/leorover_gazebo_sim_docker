@@ -1,0 +1,37 @@
+[0.726s] Invoking command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_gazebo_bridge': PYTHONPATH=/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/prefix_override:/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/leorover_gazebo_bridge build --build-base /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build install --record /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/install.log --single-version-externally-managed
+[0.916s] running egg_info
+[0.916s] creating ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info
+[0.916s] writing ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/PKG-INFO
+[0.916s] writing dependency_links to ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/dependency_links.txt
+[0.916s] writing entry points to ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/entry_points.txt
+[0.916s] writing requirements to ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/requires.txt
+[0.916s] writing top-level names to ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/top_level.txt
+[0.918s] writing manifest file '../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/SOURCES.txt'
+[0.944s] reading manifest file '../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/SOURCES.txt'
+[0.944s] writing manifest file '../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info/SOURCES.txt'
+[0.944s] running build
+[0.944s] running build_py
+[0.944s] creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build
+[0.944s] creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build/lib
+[0.944s] creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build/lib/leorover_gazebo_bridge
+[0.944s] copying leorover_gazebo_bridge/__init__.py -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build/lib/leorover_gazebo_bridge
+[0.945s] running install
+[0.945s] running install_lib
+[0.946s] creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages/leorover_gazebo_bridge
+[0.946s] copying /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build/lib/leorover_gazebo_bridge/__init__.py -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages/leorover_gazebo_bridge
+[0.946s] byte-compiling /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages/leorover_gazebo_bridge/__init__.py to __init__.cpython-38.pyc
+[0.947s] running install_data
+[0.947s] creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/ament_index
+[0.948s] creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/ament_index/resource_index
+[0.948s] creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/ament_index/resource_index/packages
+[0.948s] copying resource/leorover_gazebo_bridge -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/ament_index/resource_index/packages
+[0.948s] copying package.xml -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge
+[0.948s] creating /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/launch
+[0.948s] copying launch/leorover_gazebo_sim.launch.py -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/launch
+[0.948s] copying launch/leorover_gazebo_bridge.launch.py -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/launch
+[0.948s] copying launch/ros2_control_demo.launch.py -> /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/launch
+[0.948s] running install_egg_info
+[0.949s] Copying ../../build/leorover_gazebo_bridge/leorover_gazebo_bridge.egg-info to /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages/leorover_gazebo_bridge-0.0.1-py3.8.egg-info
+[0.949s] running install_scripts
+[0.965s] writing list of installed files to '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/install.log'
+[1.001s] Invoked command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_gazebo_bridge' returned '0': PYTHONPATH=/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/prefix_override:/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/leorover_gazebo_bridge build --build-base /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build install --record /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/install.log --single-version-externally-managed

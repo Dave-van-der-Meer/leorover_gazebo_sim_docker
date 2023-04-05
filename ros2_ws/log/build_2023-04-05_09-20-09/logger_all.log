@@ -1,0 +1,191 @@
+[0.274s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.274s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f35bc5fe1f0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=16, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f35bc5fe1f0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f35bc5fe730>)
+[0.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.308s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.308s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_description) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_description) by extension 'ignore'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_description) by extension 'ignore_ament_install'
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_description) by extensions ['colcon_pkg']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_description) by extension 'colcon_pkg'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_description) by extensions ['colcon_meta']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_description) by extension 'colcon_meta'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_description) by extensions ['ros']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_description) by extension 'ros'
+[0.323s] DEBUG:colcon.colcon_core.package_identification:Package 'src/leorover_description' with type 'ros.ament_cmake' and name 'leorover_description'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_gazebo_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_gazebo_bridge) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_gazebo_bridge) by extension 'ignore_ament_install'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_gazebo_bridge) by extensions ['colcon_pkg']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_gazebo_bridge) by extension 'colcon_pkg'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_gazebo_bridge) by extensions ['colcon_meta']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_gazebo_bridge) by extension 'colcon_meta'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_gazebo_bridge) by extensions ['ros']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/leorover_gazebo_bridge) by extension 'ros'
+[0.324s] DEBUG:colcon.colcon_core.package_identification:Package 'src/leorover_gazebo_bridge' with type 'ros.ament_python' and name 'leorover_gazebo_bridge'
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.344s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.344s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.348s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 39 installed packages in /home/dave/ros2_ws/install
+[0.350s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 367 installed packages in /opt/ros/foxy
+[0.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'leorover_description' build argument 'cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'leorover_description' build argument 'cmake_target' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'leorover_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'leorover_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'leorover_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'leorover_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'leorover_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'leorover_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'leorover_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.436s] DEBUG:colcon.colcon_core.verb:Building package 'leorover_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description', 'merge_install': False, 'path': '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_description', 'symlink_install': False, 'test_result_base': None}
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'leorover_gazebo_bridge' build argument 'cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'leorover_gazebo_bridge' build argument 'cmake_target' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'leorover_gazebo_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'leorover_gazebo_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'leorover_gazebo_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'leorover_gazebo_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'leorover_gazebo_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'leorover_gazebo_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'leorover_gazebo_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.437s] DEBUG:colcon.colcon_core.verb:Building package 'leorover_gazebo_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge', 'merge_install': False, 'path': '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_gazebo_bridge', 'symlink_install': False, 'test_result_base': None}
+[0.438s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.441s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.441s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_description' with build type 'ament_cmake'
+[0.441s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_description'
+[0.446s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.446s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.446s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.452s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_gazebo_bridge' with build type 'ament_python'
+[0.452s] Level 1:colcon.colcon_core.shell:create_environment_hook('leorover_gazebo_bridge', 'ament_prefix_path')
+[0.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/hook/ament_prefix_path.ps1'
+[0.454s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/hook/ament_prefix_path.dsv'
+[0.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/hook/ament_prefix_path.sh'
+[0.456s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.456s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.464s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dave/ros2_ws/install/src_backend_py:/home/dave/ros2_ws/install/my_leorover:/home/dave/ros2_ws/install/light_server:/home/dave/ros2_ws/install/leorover_network_monitor:/home/dave/ros2_ws/install/leorover_multi_goal:/home/dave/ros2_ws/install/last_known_pose:/home/dave/ros2_ws/install/laser_cropper:/opt/ros/foxy /usr/bin/cmake /home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_description -DCMAKE_INSTALL_PREFIX=/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description
+[0.667s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_gazebo_bridge'
+[0.669s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.669s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.178s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_gazebo_bridge': PYTHONPATH=/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/prefix_override:/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/leorover_gazebo_bridge build --build-base /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build install --record /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/install.log --single-version-externally-managed
+[1.199s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dave/ros2_ws/install/src_backend_py:/home/dave/ros2_ws/install/my_leorover:/home/dave/ros2_ws/install/light_server:/home/dave/ros2_ws/install/leorover_network_monitor:/home/dave/ros2_ws/install/leorover_multi_goal:/home/dave/ros2_ws/install/last_known_pose:/home/dave/ros2_ws/install/laser_cropper:/opt/ros/foxy /usr/bin/cmake /home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_description -DCMAKE_INSTALL_PREFIX=/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description
+[1.201s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dave/ros2_ws/install/src_backend_py:/home/dave/ros2_ws/install/my_leorover:/home/dave/ros2_ws/install/light_server:/home/dave/ros2_ws/install/leorover_network_monitor:/home/dave/ros2_ws/install/leorover_multi_goal:/home/dave/ros2_ws/install/last_known_pose:/home/dave/ros2_ws/install/laser_cropper:/opt/ros/foxy /usr/bin/cmake --build /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description
+[1.237s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dave/ros2_ws/install/src_backend_py:/home/dave/ros2_ws/install/my_leorover:/home/dave/ros2_ws/install/light_server:/home/dave/ros2_ws/install/leorover_network_monitor:/home/dave/ros2_ws/install/leorover_multi_goal:/home/dave/ros2_ws/install/last_known_pose:/home/dave/ros2_ws/install/laser_cropper:/opt/ros/foxy /usr/bin/cmake --build /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description
+[1.269s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dave/ros2_ws/install/src_backend_py:/home/dave/ros2_ws/install/my_leorover:/home/dave/ros2_ws/install/light_server:/home/dave/ros2_ws/install/leorover_network_monitor:/home/dave/ros2_ws/install/leorover_multi_goal:/home/dave/ros2_ws/install/last_known_pose:/home/dave/ros2_ws/install/laser_cropper:/opt/ros/foxy /usr/bin/cmake --install /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description
+[1.432s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(leorover_description)
+[1.434s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dave/ros2_ws/install/src_backend_py:/home/dave/ros2_ws/install/my_leorover:/home/dave/ros2_ws/install/light_server:/home/dave/ros2_ws/install/leorover_network_monitor:/home/dave/ros2_ws/install/leorover_multi_goal:/home/dave/ros2_ws/install/last_known_pose:/home/dave/ros2_ws/install/laser_cropper:/opt/ros/foxy /usr/bin/cmake --install /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description
+[1.439s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description' for CMake module files
+[1.439s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description' for CMake config files
+[1.439s] Level 1:colcon.colcon_core.shell:create_environment_hook('leorover_description', 'cmake_prefix_path')
+[1.440s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/hook/cmake_prefix_path.ps1'
+[1.441s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/hook/cmake_prefix_path.dsv'
+[1.441s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/hook/cmake_prefix_path.sh'
+[1.442s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/bin'
+[1.442s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/lib/pkgconfig/leorover_description.pc'
+[1.442s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/lib/python3.8/site-packages'
+[1.443s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/bin'
+[1.444s] INFO:colcon.colcon_core.shell:Creating package script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/package.ps1'
+[1.445s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/package.dsv'
+[1.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/package.sh'
+[1.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/package.bash'
+[1.447s] INFO:colcon.colcon_core.shell:Creating package script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/package.zsh'
+[1.447s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/colcon-core/packages/leorover_description)
+[1.452s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge' for CMake module files
+[1.453s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_gazebo_bridge' returned '0': PYTHONPATH=/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/prefix_override:/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/leorover_gazebo_bridge build --build-base /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/build install --record /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_gazebo_bridge/install.log --single-version-externally-managed
+[1.453s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge' for CMake config files
+[1.454s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib'
+[1.454s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/bin'
+[1.454s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/pkgconfig/leorover_gazebo_bridge.pc'
+[1.454s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/lib/python3.8/site-packages'
+[1.454s] Level 1:colcon.colcon_core.shell:create_environment_hook('leorover_gazebo_bridge', 'pythonpath')
+[1.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/hook/pythonpath.ps1'
+[1.456s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/hook/pythonpath.dsv'
+[1.457s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/hook/pythonpath.sh'
+[1.457s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/bin'
+[1.457s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(leorover_gazebo_bridge)
+[1.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/package.ps1'
+[1.459s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/package.dsv'
+[1.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/package.sh'
+[1.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/package.bash'
+[1.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/leorover_gazebo_bridge/package.zsh'
+[1.460s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_gazebo_bridge/share/colcon-core/packages/leorover_gazebo_bridge)
+[1.467s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(leorover_description)
+[1.469s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description' for CMake module files
+[1.469s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description' for CMake config files
+[1.469s] Level 1:colcon.colcon_core.shell:create_environment_hook('leorover_description', 'cmake_prefix_path')
+[1.470s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/hook/cmake_prefix_path.ps1'
+[1.470s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/hook/cmake_prefix_path.dsv'
+[1.471s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/hook/cmake_prefix_path.sh'
+[1.471s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/bin'
+[1.471s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/lib/pkgconfig/leorover_description.pc'
+[1.471s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/lib/python3.8/site-packages'
+[1.471s] Level 1:colcon.colcon_core.environment:checking '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/bin'
+[1.472s] INFO:colcon.colcon_core.shell:Creating package script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/package.ps1'
+[1.473s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/package.dsv'
+[1.473s] INFO:colcon.colcon_core.shell:Creating package script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/package.sh'
+[1.473s] INFO:colcon.colcon_core.shell:Creating package script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/package.bash'
+[1.474s] INFO:colcon.colcon_core.shell:Creating package script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/package.zsh'
+[1.474s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/colcon-core/packages/leorover_description)
+[1.474s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.475s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.475s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.475s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.481s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.481s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.481s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.527s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.529s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/local_setup.ps1'
+[1.530s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/_local_setup_util_ps1.py'
+[1.531s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/setup.ps1'
+[1.533s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/local_setup.sh'
+[1.533s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/_local_setup_util_sh.py'
+[1.533s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/setup.sh'
+[1.535s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/local_setup.bash'
+[1.535s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/setup.bash'
+[1.537s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/local_setup.zsh'
+[1.537s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/setup.zsh'
