@@ -12,4 +12,8 @@
   <xacro:xavier_mount/>
   <xacro:rp_lidar_mount/>
 
+  <!-- <gazebo>
+    <plugin filename="libignition-gazebo-joint-state-publisher-system.so" name="ignition::gazebo::systems::JointStatePublisher"/>
+  </gazebo> -->
+
 </robot>

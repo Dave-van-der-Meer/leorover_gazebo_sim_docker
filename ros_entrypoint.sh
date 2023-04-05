@@ -3,7 +3,8 @@
 set -e
 
 export ROS2_INSTALL_PATH="/opt/ros/humble"
-export GZ_SIM_RESOURCE_PATH=/home/leo/ros2_ws/src/leorover_description:${IGN_GAZEBO_RESOURCE_PATH}
+export IGN_GAZEBO_RESOURCE_PATH=/home/leo/ros2_ws/install/leorover_description/share:/home/leo/ros2_ws/install/ros_gz_sim_demos/share
+export GZ_SIM_RESOURCE_PATH=/home/leo/ros2_ws/install/leorover_description/share:/home/leo/ros2_ws/install/ros_gz_sim_demos/share
 export ROS_NAMESPACE="leo_sim"
 export ROS_DOMAIN_ID=${ROS_DOMAIN_ID}
 
