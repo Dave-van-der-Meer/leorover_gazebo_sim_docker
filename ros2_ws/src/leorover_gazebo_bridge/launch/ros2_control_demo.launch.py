@@ -37,7 +37,7 @@ def generate_launch_description():
 
     xacro_file = os.path.join(leorover_urdf_path,
                               'urdf',
-                              'leo.urdf.xacro')
+                              'leo_sim.urdf.xacro')
 
     doc = xacro.parse(open(xacro_file))
     xacro.process_doc(doc)
