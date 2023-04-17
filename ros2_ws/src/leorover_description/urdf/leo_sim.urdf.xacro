@@ -100,8 +100,59 @@
       <minDepth>0.003</minDepth>
     </gazebo>
 
+    <!-- Diff Drive -->
+    <!-- <xacro:arg name="gazebo_controllers" default="$(find leorover_description)/config/controllers.yaml" />
+    <gazebo>
+      <plugin name="ign_ros2_control-system" filename="ign_ros2_control::IgnitionROS2ControlPlugin">
+        <parameters>$(arg gazebo_controllers)</parameters>
+      </plugin>
+    </gazebo> -->
+    <gazebo>
+            <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+                <alwaysOn>true</alwaysOn>
+                <update>100</update>
+                <robotNamespace>"/"</robotNamespace>
+                <!-- TF -->
+                <commandTopic>cmd_vel</commandTopic>
+                <odometryTopic>odom</odometryTopic>
+                <odometryFrame>odom</odometryFrame>
+                <robotBaseFrame>base_link</robotBaseFrame>
+                <publishWheelTF>false</publishWheelTF>
+                <publishWheelJointState>false</publishWheelJointState>
+                <legacyMode>false</legacyMode>
+
+                <!-- Config -->
+                <wheelSeparation>0.4</wheelSeparation>
+                <wheelDiameter>0.12</wheelDiameter>
+                <wheelAcceleration>0</wheelAcceleration>
+                <wheelTorque>50</wheelTorque>
+                <updateRate>100.0</updateRate>
+
+                <left_joint>wheel_FL_joint</left_joint>
+                <left_joint>wheel_RL_joint</left_joint>
+                <right_joint>wheel_FR_joint</right_joint>
+                <right_joint>wheel_RR_joint</right_joint>
+                <rosDebugLevel>na</rosDebugLevel>
+                <publishTf>true</publishTf>
+                <tf_prefix>"/"</tf_prefix>
+                <!-- Odometry Source?? -->
+            </plugin>
+</gazebo>
+
+    <!-- RP LiDAR -->
+    <!-- <gazebo reference="rp_lidar">
+      <xacro:ray_sensor sensor_name="rp_lidar" gazebo="${gazebo}" 
+                    update_rate="10.0" visualize="1" 
+                    h_samples="640" h_res="1.0" h_min_angle="${-pi}" h_max_angle="${pi}" 
+                    r_min="0.164" r_max="12.0" r_res="0.01">
+                    <plugin name="dummy" filename="dummyfile"></plugin>
+      </xacro:ray_sensor>
+      <xacro:material_darkgray/>
+    </gazebo> -->
+
+
     <!-- camera -->
-    <gazebo reference="${link_prefix}camera_optical_frame">
+    <!-- <gazebo reference="${link_prefix}camera_optical_frame">
       <sensor type="camera" name="leo_camera">
         <always_on>true</always_on>
         <update_rate>30.0</update_rate>
@@ -144,7 +195,7 @@
           <distortionT2>0.000000</distortionT2>
         </plugin>
       </sensor>
-    </gazebo>
+    </gazebo> -->
 
     <!-- <gazebo>
         <sensor type="camera" name="internal_camera">
