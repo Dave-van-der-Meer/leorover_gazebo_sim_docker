@@ -28,10 +28,7 @@ docker run \
     --env IGN_GAZEBO_RESOURCE_PATH=/home/leo/ros2_ws/install/leorover_description/share:/home/leo/ros2_ws/install/ros_gz_sim_demos/share \
     --env GZ_SIM_RESOURCE_PATH=/home/leo/ros2_ws/src/leorover_description:/home/leo/ros2_ws/install/ros_gz_sim_demos/share \
     --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
-    --volume ./gazebo_leorover_model:/home/leo/gazebo_leorover_model \
-    --volume ./environment_models:/home/leo/environment_models \
-    --volume ./ros2_ws/src/leorover_gazebo_bridge:/home/leo/ros2_ws/src/leorover_gazebo_bridge \
-    --volume ./ros2_ws/src/leorover_description:/home/leo/ros2_ws/src/leorover_description \
+    --volume ./ros2_ws/src/leorover_simulation:/home/leo/ros2_ws/src/leorover_simulation \
     --device /dev/dri/renderD128:/dev/dri/renderD128 \
     --device /dev/dri/renderD129:/dev/dri/renderD129 \
     --name leo_gazebo \

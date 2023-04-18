@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="xavier_mount" 
+               params="link_prefix:=''
+                       joint_prefix:=''">
+
+  <!-- makita battery 3D printed mount -->
+  <link name="${link_prefix}makita_battery_mount">
+    <visual>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/><!-- ${-pi/2} -->
+      <geometry>
+        <mesh filename="package://leorover_description/models/model_extensions/makita_battery_mount.dae"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin xyz="0.0 0.0 0.0"/>
+      <mass value="0.2"/>
+      <inertia
+        ixx="0.000749"
+        ixy="0"
+        iyy="0.000749"
+        ixz="0"
+        izz="0.000749"
+        iyz="0"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.06"/>
+      <geometry>
+        <box size="0.15 0.15 0.12"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="${joint_prefix}makita_battery_mount_joint" type="fixed">
+    <origin xyz="-0.09 0.0 0.0" rpy="0 0 0"/>
+    <parent link="${link_prefix}base_link"/>
+    <child link="${link_prefix}makita_battery_mount"/>
+  </joint>
+
+  <!-- makita battery adapter -->
+  <link name="${link_prefix}makita_battery_adapter">
+    <visual>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://leorover_description/models/model_extensions/makita_battery_adapter.dae"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin xyz="0.0 0.0 0.0"/>
+      <mass value="0.2"/>
+      <inertia
+        ixx="0.000749"
+        ixy="0"
+        iyy="0.000749"
+        ixz="0"
+        izz="0.000749"
+        iyz="0"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.012"/>
+      <geometry>
+        <box size="0.09 0.07 0.025"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="${joint_prefix}makita_battery_adapter_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.015" rpy="0 0 0"/>
+    <parent link="${link_prefix}makita_battery_mount"/>
+    <child link="${link_prefix}makita_battery_adapter"/>
+  </joint>
+
+  <!-- makita battery -->
+  <link name="${link_prefix}makita_battery">
+    <visual>
+    <origin xyz="0.0 0.0 0.035" rpy="0 ${pi} 0"/>
+      <geometry>
+        <mesh filename="package://leorover_description/models/model_extensions/makita_battery.dae"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin xyz="0.0 0.0 0.0"/>
+      <mass value="0.5"/>
+      <inertia
+        ixx="0.00037083"
+        ixy="0"
+        iyy="0.00052083"
+        ixz="0"
+        izz="0.00052083"
+        iyz="0"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.0 0.0 0.01"/>
+      <geometry>
+        <box size="0.1 0.08 0.04"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="${joint_prefix}makita_battery_joint" type="fixed">
+    <origin xyz="-0.005 0.0 0.035" rpy="0 0 0"/>
+    <parent link="${link_prefix}makita_battery_adapter"/>
+    <child link="${link_prefix}makita_battery"/>
+  </joint>
+
+
+  <!-- entire xavier mount -->
+  <link name="${link_prefix}xavier_mount">
+    <visual>
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/><!-- ${-pi/2} -->
+      <geometry>
+        <mesh filename="package://leorover_description/models/model_extensions/xavier_mount.dae"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin xyz="0.01 0.0 0.04"/>
+      <mass value="0.4"/>
+      <inertia
+        ixx="0.00069" ixy="0" ixz="0"
+        iyy="0.00055"  iyz="0"
+        izz="0.00055"/>
+    </inertial>
+    <collision>
+      <origin xyz="0.01 0.0 0.04"/>
+      <geometry>
+        <box size="0.1 0.12 0.08"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="${joint_prefix}xavier_mount_joint" type="fixed">
+    <origin xyz="-0.014 0.0 0.12" rpy="0 0 0"/>
+    <parent link="${link_prefix}makita_battery_mount"/>
+    <child link="${link_prefix}xavier_mount"/>
+  </joint>
+
+
+  </xacro:macro>
+</robot>

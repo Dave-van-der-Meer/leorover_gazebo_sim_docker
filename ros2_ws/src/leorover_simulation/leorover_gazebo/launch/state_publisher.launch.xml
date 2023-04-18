@@ -1,0 +1,13 @@
+<launch>
+  <arg
+    name="model"
+    default="$(find-pkg-share leorover_description)/urdf/leo.urdf.xacro"
+    description="Absolute path to robot urdf.xacro file" />
+  <arg name="robot_namespace" default="leo0X"/>
+
+  <node pkg="robot_state_publisher" exec="robot_state_publisher">
+    <param name="robot_description" value="$(command 'xacro $(var model)')" />
+    <param name="frame_prefix" value="$(var robot_namespace)/"/>
+    <remap from="/joint_states" to="$(var robot_namespace)/joint_states" />
+  </node>
+</launch>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+       name="leo_sim">
+
+  <xacro:arg name="fixed" default="false"/>
+  <xacro:arg name="robot_ns" default="leorover_sim"/>
+
+  <xacro:include filename="$(find leorover_description)/urdf/macros.xacro"/>
+  <xacro:include filename="$(find leorover_description)/urdf/mast.xacro"/>
+  <xacro:include filename="$(find leorover_description)/urdf/xavier_mount.xacro"/>
+  <xacro:include filename="$(find leorover_description)/urdf/rp_lidar_mount.xacro"/>
+
+  <xacro:leo/>
+  <xacro:leo_mast/>
+  <xacro:xavier_mount/>
+  <xacro:rp_lidar_mount/>
+
+  <!-- <xacro:leo_sim robot_ns="$(arg robot_ns)"
+                 fixed="$(arg fixed)"/> -->
+  <!-- <xacro:leo_mast robot_ns="($arg robot_ns)"/> -->
+
+  <!-- LEO GAZEBO -->
+
+  <xacro:macro name="leo_gazebo"
+               params="robot_ns:=''">
+
+    <xacro:property name="link_prefix" value=""/>
+    <xacro:if value="${robot_ns != '' and robot_ns != '/'}">
+      <xacro:property name="link_prefix" value="${robot_ns}/"/>
+    </xacro:if>
+
+    <!-- base ODE properties -->
+    <gazebo reference="${link_prefix}base_footprint">
+      <kp>1e6</kp>
+      <kd>1.0</kd>
+      <mu1>0.3</mu1>
+      <mu2>0.3</mu2>
+      <minDepth>0.003</minDepth>
+    </gazebo>
+
+    <gazebo reference="${link_prefix}base_link">
+      <kp>1e6</kp>
+      <kd>1.0</kd>
+      <mu1>0.3</mu1>
+      <mu2>0.3</mu2>
+      <minDepth>0.003</minDepth>
+    </gazebo>
+
+    <!-- rocker ODE properties -->
+    <gazebo reference="${link_prefix}rocker_L_link">
+      <kp>1e6</kp>
+      <kd>1.0</kd>
+      <mu1>0.3</mu1>
+      <mu2>0.3</mu2>
+      <minDepth>0.003</minDepth>
+    </gazebo>
+
+    <gazebo reference="${link_prefix}rocker_R_link">
+      <kp>1e6</kp>
+      <kd>1.0</kd>
+      <mu1>0.3</mu1>
+      <mu2>0.3</mu2>
+      <minDepth>0.003</minDepth>
+    </gazebo>
+
+    <!-- wheel ODE properties -->
+    <gazebo reference="${link_prefix}wheel_FL_link">
+      <kp>1e6</kp>
+      <kd>100.0</kd>
+      <mu1>3.0</mu1>
+      <mu2>1.0</mu2>
+      <fdir1>1 0 0</fdir1>
+      <minDepth>0.003</minDepth>
+    </gazebo>
+
+    <gazebo reference="${link_prefix}wheel_FR_link">
+      <kp>1e6</kp>
+      <kd>100.0</kd>
+      <mu1>3.0</mu1>
+      <mu2>1.0</mu2>
+      <fdir1>1 0 0</fdir1>
+      <minDepth>0.003</minDepth>
+    </gazebo>
+
+    <gazebo reference="${link_prefix}wheel_RL_link">
+      <kp>1e6</kp>
+      <kd>100.0</kd>
+      <mu1>3.0</mu1>
+      <mu2>1.0</mu2>
+      <fdir1>1 0 0</fdir1>
+      <minDepth>0.003</minDepth>
+    </gazebo>
+
+    <gazebo reference="${link_prefix}wheel_RR_link">
+      <kp>1e6</kp>
+      <kd>100.0</kd>
+      <mu1>3.0</mu1>
+      <mu2>1.0</mu2>
+      <fdir1>1 0 0</fdir1>
+      <minDepth>0.003</minDepth>
+    </gazebo>
+
+    <!-- Diff Drive -->
+    <!-- <xacro:arg name="gazebo_controllers" default="$(find leorover_description)/config/controllers.yaml" />
+    <gazebo>
+      <plugin name="ign_ros2_control-system" filename="ign_ros2_control::IgnitionROS2ControlPlugin">
+        <parameters>$(arg gazebo_controllers)</parameters>
+      </plugin>
+    </gazebo> -->
+    <gazebo>
+            <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+                <alwaysOn>true</alwaysOn>
+                <update>100</update>
+                <robotNamespace>"/"</robotNamespace>
+                <!-- TF -->
+                <commandTopic>cmd_vel</commandTopic>
+                <odometryTopic>odom</odometryTopic>
+                <odometryFrame>odom</odometryFrame>
+                <robotBaseFrame>base_link</robotBaseFrame>
+                <publishWheelTF>false</publishWheelTF>
+                <publishWheelJointState>false</publishWheelJointState>
+                <legacyMode>false</legacyMode>
+
+                <!-- Config -->
+                <wheelSeparation>0.4</wheelSeparation>
+                <wheelDiameter>0.12</wheelDiameter>
+                <wheelAcceleration>0</wheelAcceleration>
+                <wheelTorque>50</wheelTorque>
+                <updateRate>100.0</updateRate>
+
+                <left_joint>wheel_FL_joint</left_joint>
+                <left_joint>wheel_RL_joint</left_joint>
+                <right_joint>wheel_FR_joint</right_joint>
+                <right_joint>wheel_RR_joint</right_joint>
+                <rosDebugLevel>na</rosDebugLevel>
+                <publishTf>true</publishTf>
+                <tf_prefix>"/"</tf_prefix>
+                <!-- Odometry Source?? -->
+            </plugin>
+</gazebo>
+
+    <!-- RP LiDAR -->
+    <!-- <gazebo reference="rp_lidar">
+      <xacro:ray_sensor sensor_name="rp_lidar" gazebo="${gazebo}" 
+                    update_rate="10.0" visualize="1" 
+                    h_samples="640" h_res="1.0" h_min_angle="${-pi}" h_max_angle="${pi}" 
+                    r_min="0.164" r_max="12.0" r_res="0.01">
+                    <plugin name="dummy" filename="dummyfile"></plugin>
+      </xacro:ray_sensor>
+      <xacro:material_darkgray/>
+    </gazebo> -->
+
+
+    <!-- camera -->
+    <!-- <gazebo reference="${link_prefix}camera_optical_frame">
+      <sensor type="camera" name="leo_camera">
+        <always_on>true</always_on>
+        <update_rate>30.0</update_rate>
+        <visualize>false</visualize> 
+        <camera name="leo_camera">
+          <horizontal_fov>1.9</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.02</near>
+            <far>300</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+          <distortion>
+            <k1>-0.279817</k1>
+            <k2>0.060321</k2>
+            <k3>0.000487</k3>
+            <p1>0.000310</p1>
+            <p2>0.000000</p2>
+            <center>0.5 0.5</center>
+          </distortion>
+        </camera>
+        <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+          <robotNamespace>${robot_ns}</robotNamespace>
+          <cameraName>camera</cameraName>
+          <imageTopicName>image_raw</imageTopicName>
+          <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+          <frameName>camera_optical_frame</frameName>
+          <distortionK1>-0.279817</distortionK1>
+          <distortionK2>0.060321</distortionK2>
+          <distortionK3>0.000487</distortionK3>
+          <distortionT1>0.000310</distortionT1>
+          <distortionT2>0.000000</distortionT2>
+        </plugin>
+      </sensor>
+    </gazebo> -->
+
+    <!-- <gazebo>
+        <sensor type="camera" name="internal_camera">
+          <topic>body_camera/image</topic>
+          <camera>
+            <horizontal_fov>1.047</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.001</near>
+              <far>100</far>
+            </clip>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.007</stddev>
+            </noise>
+          </camera>
+          <always_on>1</always_on>
+          <update_rate>15</update_rate>
+          <visualize>true</visualize>
+        </sensor>
+    </gazebo> -->
+
+    <!-- rocker differential -->
+    <!-- <gazebo> -->
+      <!-- <plugin name="rocker_differential" filename="libleo_gazebo_differential_plugin.so">
+        <jointA>rocker_L_joint</jointA>
+        <jointB>rocker_R_joint</jointB>
+        <forceConstant>100.0</forceConstant>
+      </plugin>
+    </gazebo>
+
+    <gazebo reference="${link_prefix}imu_frame">
+      <sensor type="imu" name="leo_imu_sensor">
+        <update_rate>100</update_rate>
+        <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+          <robotNamespace>${robot_ns}</robotNamespace>
+          <topicName>imu/data_raw</topicName>
+          <frameName>${link_prefix}imu_frame</frameName>
+          <updateRateHZ>100.0</updateRateHZ>
+          <gaussianNoise>0.01</gaussianNoise>
+          <initialOrientationAsReference>false</initialOrientationAsReference>
+        </plugin>
+      </sensor>
+    </gazebo> -->
+
+    <!-- ros_control plugin -->
+    <!-- <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        <robotNamespace>${robot_ns}</robotNamespace>
+        <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      </plugin>
+    </gazebo>
+
+        <plugin
+        filename="gz-sim-diff-drive-system"
+        name="gz::sim::systems::DiffDrive">
+        <left_joint>wheel_FL_joint</left_joint>
+        <left_joint>wheel_RL_joint</left_joint>
+        <right_joint>wheel_FR_joint</right_joint>
+        <right_joint>wheel_RR_joint</right_joint>
+        <wheel_separation>0.4</wheel_separation>
+        <wheel_radius>0.075</wheel_radius>
+        <odom_publish_frequency>1</odom_publish_frequency>
+        <topic>cmd_vel</topic>
+      </plugin>
+
+    <transmission name="wheel_FL_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wheel_FL_joint">
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="wheel_FL_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </actuator>
+    </transmission>
+
+    <transmission name="wheel_RL_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wheel_RL_joint">
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="wheel_RL_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </actuator>
+    </transmission>
+
+    <transmission name="wheel_FR_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wheel_FR_joint">
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="wheel_FR_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </actuator>
+    </transmission>
+
+    <transmission name="wheel_RR_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wheel_RR_joint">
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="wheel_RR_motor">
+        <mechanicalReduction>1</mechanicalReduction>
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </actuator>
+    </transmission>
+
+    <transmission name="rocker_L_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="rocker_L_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="rocker_L_virtual_motor"/>
+    </transmission>
+
+    <transmission name="rocker_R_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="rocker_R_joint">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="rocker_R_virtual_motor"/>
+    </transmission> -->
+
+  </xacro:macro>
+
+  <xacro:leo_gazebo/>
+
+</robot>
