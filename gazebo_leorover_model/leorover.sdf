@@ -476,7 +476,7 @@
           <update_rate>15</update_rate>
           <always_on>1</always_on>
           <visualize>true</visualize>
-          <topic>realsense_d455</topic>
+          <topic>leo/realsense_d455</topic>
           <camera>
             <horizontal_fov>1.0472</horizontal_fov>
             <image>
@@ -903,21 +903,11 @@
     <plugin
       filename="gz-sim-joint-state-publisher-system"
       name="gz::sim::systems::JointStatePublisher">
-        <!-- <joint_name>imu_frame_joint</joint_name>
-        <joint_name>rp_lidar_joint</joint_name>
-        <joint_name>internal_camera_optical_joint</joint_name>
-        <joint_name>realsense_camera_optical_joint</joint_name> -->
         <joint_name>wheel_FL_joint</joint_name>
         <joint_name>wheel_RL_joint</joint_name>
         <joint_name>wheel_FR_joint</joint_name>
         <joint_name>wheel_RR_joint</joint_name>
     </plugin>
-
-    <!-- <plugin
-        filename="ignition-gazebo-joint-state-publisher-system"
-        name="ignition::gazebo::systems::JointStatePublisher">
-    </plugin> -->
-
 
   </model>
 </sdf>
