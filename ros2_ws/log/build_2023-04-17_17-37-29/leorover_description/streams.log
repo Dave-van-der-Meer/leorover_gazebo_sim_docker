@@ -1,0 +1,77 @@
+[0.025s] Invoking command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dave/ros2_ws/install/src_backend_py:/home/dave/ros2_ws/install/optitrack_tf:/home/dave/ros2_ws/install/my_leorover:/home/dave/ros2_ws/install/light_server:/home/dave/ros2_ws/install/leorover_network_monitor:/home/dave/ros2_ws/install/leorover_multi_goal:/home/dave/ros2_ws/install/last_known_pose:/home/dave/ros2_ws/install/laser_cropper:/opt/ros/foxy /usr/bin/cmake /home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_simulator/leorover_description -DCMAKE_INSTALL_PREFIX=/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description
+[0.116s] -- The C compiler identification is GNU 9.4.0
+[0.179s] -- The CXX compiler identification is GNU 9.4.0
+[0.185s] -- Check for working C compiler: /usr/bin/cc
+[0.251s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.252s] -- Detecting C compiler ABI info
+[0.313s] -- Detecting C compiler ABI info - done
+[0.320s] -- Detecting C compile features
+[0.320s] -- Detecting C compile features - done
+[0.322s] -- Check for working CXX compiler: /usr/bin/c++
+[0.391s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.392s] -- Detecting CXX compiler ABI info
+[0.466s] -- Detecting CXX compiler ABI info - done
+[0.474s] -- Detecting CXX compile features
+[0.474s] -- Detecting CXX compile features - done
+[0.481s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.525s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.526s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.808s] -- Configuring done
+[0.809s] -- Generating done
+[0.810s] -- Build files have been written to: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description
+[0.815s] Invoked command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dave/ros2_ws/install/src_backend_py:/home/dave/ros2_ws/install/optitrack_tf:/home/dave/ros2_ws/install/my_leorover:/home/dave/ros2_ws/install/light_server:/home/dave/ros2_ws/install/leorover_network_monitor:/home/dave/ros2_ws/install/leorover_multi_goal:/home/dave/ros2_ws/install/last_known_pose:/home/dave/ros2_ws/install/laser_cropper:/opt/ros/foxy /usr/bin/cmake /home/dave/Documents/docker/leo_sim_docker/ros2_ws/src/leorover_simulator/leorover_description -DCMAKE_INSTALL_PREFIX=/home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description
+[0.819s] Invoking command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dave/ros2_ws/install/src_backend_py:/home/dave/ros2_ws/install/optitrack_tf:/home/dave/ros2_ws/install/my_leorover:/home/dave/ros2_ws/install/light_server:/home/dave/ros2_ws/install/leorover_network_monitor:/home/dave/ros2_ws/install/leorover_multi_goal:/home/dave/ros2_ws/install/last_known_pose:/home/dave/ros2_ws/install/laser_cropper:/opt/ros/foxy /usr/bin/cmake --build /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description
+[0.865s] Invoked command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dave/ros2_ws/install/src_backend_py:/home/dave/ros2_ws/install/optitrack_tf:/home/dave/ros2_ws/install/my_leorover:/home/dave/ros2_ws/install/light_server:/home/dave/ros2_ws/install/leorover_network_monitor:/home/dave/ros2_ws/install/leorover_multi_goal:/home/dave/ros2_ws/install/last_known_pose:/home/dave/ros2_ws/install/laser_cropper:/opt/ros/foxy /usr/bin/cmake --build /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description
+[0.902s] Invoking command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dave/ros2_ws/install/src_backend_py:/home/dave/ros2_ws/install/optitrack_tf:/home/dave/ros2_ws/install/my_leorover:/home/dave/ros2_ws/install/light_server:/home/dave/ros2_ws/install/leorover_network_monitor:/home/dave/ros2_ws/install/leorover_multi_goal:/home/dave/ros2_ws/install/last_known_pose:/home/dave/ros2_ws/install/laser_cropper:/opt/ros/foxy /usr/bin/cmake --install /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description
+[0.909s] -- Install configuration: ""
+[0.910s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/config
+[0.910s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/config/controllers.yaml
+[0.910s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/launch
+[0.910s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/launch/state_publisher.launch.xml
+[0.910s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/launch/realsense_camera_static_tf_publisher.launch.py
+[0.910s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/launch/realsense_camera_static_tf_publisher.launch.xml
+[0.910s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models
+[0.910s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/Chassis.dae
+[0.925s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/Rocker_outline.stl
+[0.925s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/model_extensions
+[0.925s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/model_extensions/camera_mount_fixed_angle_20_degrees_v1.dae
+[0.926s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/model_extensions/long_camera_mast.dae
+[0.929s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/model_extensions/D435_D455_Optitrack_Mount_v2.dae
+[0.930s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/model_extensions/Optitrack_Active_Marker_Mount_v10.dae
+[0.930s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/model_extensions/Optitrack_Active_Marker_Mockup_v1.dae
+[0.942s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/model_extensions/d455.stl
+[0.946s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/model_extensions/camera_mount_fixed_angle_25_degrees_v2.dae
+[0.947s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/model_extensions/mikrotik_antenna.dae
+[0.948s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/model_extensions/Leo_Rover_Camera_Mast.dae
+[0.996s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/WheelA.dae
+[0.999s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/Chassis_outline.stl
+[0.999s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/Wheel_outline.stl
+[0.999s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/Antenna.dae
+[1.000s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/Rocker.dae
+[1.004s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/models/WheelB.dae
+[1.008s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/urdf
+[1.008s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/urdf/leo.urdf.xacro
+[1.008s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/urdf/mast.xacro
+[1.008s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/urdf/realsense_d455
+[1.008s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/urdf/realsense_d455/_d455.urdf.xacro
+[1.008s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/urdf/realsense_d455/_materials.urdf.xacro
+[1.008s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/urdf/realsense_d455/test_d455_camera.urdf.xacro
+[1.008s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/urdf/realsense_d455/_usb_plug.urdf.xacro
+[1.008s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/urdf/macros.xacro
+[1.008s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/urdf/leo_sim.urdf.xacro
+[1.008s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/ament_index/resource_index/package_run_dependencies/leorover_description
+[1.009s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/ament_index/resource_index/parent_prefix_path/leorover_description
+[1.009s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/environment/ament_prefix_path.sh
+[1.009s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/environment/ament_prefix_path.dsv
+[1.009s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/environment/path.sh
+[1.009s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/environment/path.dsv
+[1.009s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/local_setup.bash
+[1.009s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/local_setup.sh
+[1.009s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/local_setup.zsh
+[1.009s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/local_setup.dsv
+[1.009s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/package.dsv
+[1.009s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/ament_index/resource_index/packages/leorover_description
+[1.009s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/cmake/leorover_descriptionConfig.cmake
+[1.010s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/cmake/leorover_descriptionConfig-version.cmake
+[1.010s] -- Installing: /home/dave/Documents/docker/leo_sim_docker/ros2_ws/install/leorover_description/share/leorover_description/package.xml
+[1.013s] Invoked command in '/home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dave/ros2_ws/install/src_backend_py:/home/dave/ros2_ws/install/optitrack_tf:/home/dave/ros2_ws/install/my_leorover:/home/dave/ros2_ws/install/light_server:/home/dave/ros2_ws/install/leorover_network_monitor:/home/dave/ros2_ws/install/leorover_multi_goal:/home/dave/ros2_ws/install/last_known_pose:/home/dave/ros2_ws/install/laser_cropper:/opt/ros/foxy /usr/bin/cmake --install /home/dave/Documents/docker/leo_sim_docker/ros2_ws/build/leorover_description

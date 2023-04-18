@@ -6,10 +6,16 @@ from launch_ros.actions import Node
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from ament_index_python.packages import get_package_share_directory
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+import xacro
 
 def generate_launch_description():
 
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
+    leorover_urdf_path = os.path.join(get_package_share_directory('leorover_description'))
+
+    xacro_file = os.path.join(leorover_urdf_path,
+                              'urdf',
+                              'leo_sim.urdf.xacro')
 
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -63,7 +69,10 @@ def generate_launch_description():
     # Parse robot description from xacro
     robot_description_file =  '/home/leo/gazebo_leorover_model/leorover.sdf'
     # robot_description_config = xacro.process_file(robot_description_file)
-    robot_description = {"robot_description": robot_description_file.toxml()}
+    # robot_description = {"robot_description": robot_description_file.toxml()}
+    doc = xacro.parse(open(xacro_file))
+    xacro.process_doc(doc)
+    robot_description = {'robot_description': doc.toxml()}
 
     bridge = Node(
         package='ros_gz_bridge', 
@@ -80,10 +89,43 @@ def generate_launch_description():
         parameters=[robot_description],
     )
 
+    static_tf_base_footprint = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='base_footprint_publisher',
+        arguments=['0', '0', '0', '0', '0', '0', '1', '/leorover/base_footprint', 'base_footprint']
+    )
+
+    static_tf_rp_lidar = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='rp_lidar_publisher',
+        arguments=['0', '0', '0', '0', '0', '1', '0', 'rp_lidar_optical_frame', 'leorover/rp_lidar_frame/gpu_lidar']
+    )
+    
+    static_tf_camera = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='camera_publisher',
+        arguments=['0', '0', '0', '0', '0', '0', '1', 'camera_optical_frame', 'leorover/internal_camera_optical_frame/internal_camera']
+    )
+
+    static_tf_realsense_camera = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='realsense_camera_publisher',
+        arguments=['0', '0', '0', '-0.5', '0.5', '-0.5', '0.5', 'realsense_camera_link', 'leorover/realsense_camera_optical_frame/realsense_d455']
+    )
+      
+
     return LaunchDescription([
         gz_sim,
-        # spawn,
+        spawn,
         bridge,
         robot_state_publisher,
+        static_tf_base_footprint,
+        static_tf_rp_lidar,
+        static_tf_camera,
+        static_tf_realsense_camera,
         ])
     
