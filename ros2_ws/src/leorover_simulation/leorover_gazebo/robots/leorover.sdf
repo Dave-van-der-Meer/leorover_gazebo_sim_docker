@@ -1,4 +1,4 @@
-<sdf version='1.10'>
+<sdf version='1.9'>
   <model name='leorover'>
   <pose>0 0 0 0 0 0</pose>
     <link name='base_footprint'>
@@ -436,6 +436,7 @@
 
     <link name="internal_camera_optical_frame">
         <sensor type="camera" name="internal_camera">
+        <pose relative_to='internal_camera_optical_frame'>0.1 0 0.15 0 0.23 0</pose>
           <topic>body_camera/image</topic>
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
@@ -446,7 +447,7 @@
               <format>R8G8B8</format>
             </image>
             <clip>
-              <near>0.001</near>
+              <near>0.01</near>
               <far>100</far>
             </clip>
             <noise>
@@ -473,6 +474,7 @@
 
     <link name="realsense_camera_optical_frame">
         <sensor type="rgbd_camera" name="realsense_d455">
+          <pose relative_to='realsense_camera_optical_frame'>0.09 0 0.44 0 0.35 0</pose>
           <update_rate>15</update_rate>
           <always_on>1</always_on>
           <visualize>true</visualize>
@@ -513,7 +515,7 @@
             </depth_camera>
             <clip>
               <near>0.005</near>
-              <far>30</far>
+              <far>300</far>
             </clip>
             <noise>
               <type>gaussian</type>
@@ -524,8 +526,6 @@
         </sensor>
 
     </link>
-
-    
 
 
     <joint name='wheel_FL_joint' type='revolute'>
