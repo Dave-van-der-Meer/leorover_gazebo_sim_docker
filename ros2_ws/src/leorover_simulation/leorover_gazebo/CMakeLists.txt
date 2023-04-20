@@ -8,6 +8,7 @@ install(
     launch
     robots
     worlds
+    config
   DESTINATION share/${PROJECT_NAME}
 )
 

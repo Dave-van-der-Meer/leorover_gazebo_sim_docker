@@ -85,7 +85,13 @@ def generate_launch_description():
         name='realsense_camera_publisher',
         arguments=['0', '0', '0', '-0.5', '0.5', '-0.5', '0.5', 'realsense_camera_link', 'leorover/realsense_camera_optical_frame/realsense_d455']
     )
-      
+
+    pkg_leorover_gazebo = get_package_share_directory('leorover_gazebo')
+    rviz = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_leorover_gazebo, 'launch', 'rviz2.launch.py')),
+    )
+    
 
     return LaunchDescription([
         gz_sim,
@@ -96,5 +102,6 @@ def generate_launch_description():
         static_tf_rp_lidar,
         static_tf_camera,
         static_tf_realsense_camera,
+        rviz,
         ])
     
