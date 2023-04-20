@@ -10,6 +10,6 @@ def generate_launch_description():
             namespace='',
             executable='rviz2',
             name='rviz2',
-            arguments=['-d' + os.path.join(get_package_share_directory('leorover_description'), 'config', 'config_file.rviz')]
+            arguments=['-d' + os.path.join(get_package_share_directory('leorover_gazebo'), 'config', 'rviz.rviz')]
         )
     ])

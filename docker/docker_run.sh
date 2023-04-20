@@ -33,7 +33,7 @@ docker run \
     --device /dev/dri/renderD129:/dev/dri/renderD129 \
     --name leo_gazebo \
     local/leo_gazebo:humble \
-    ros2 launch leorover_gazebo_bridge leorover_gazebo_sim.launch.py
+    ros2 launch leorover_gazebo leorover_gazebo_sim.launch.py
     # ros2 launch leorover_gazebo_bridge ros2_control_demo.launch.py
     # --env IGN_GAZEBO_SYSTEM_PLUGIN_PATH=/home/leo/ros2_ws/install/lib${IGN_GAZEBO_SYSTEM_PLUGIN_PATH
 
