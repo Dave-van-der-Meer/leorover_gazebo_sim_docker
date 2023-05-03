@@ -26,6 +26,7 @@ RUN apt update && \
     ros-$ROS_VERSION-image-transport \
     ros-$ROS_VERSION-xacro \
     ros-$ROS_VERSION-rviz2 \
+    ros-$ROS_VERSION-actuator-msgs \
     python3-pip && \
     pip install setuptools==58.2.0
     

@@ -35,11 +35,54 @@ $ bash docker_build.sh
 ```
 
 ## Usage
-Use the script `docker_run.sh` script to run the image as a container:
+Use the script `docker_run.sh` script to run the image as a container. To run it, you need to be at the main directory of the repository, not inside the `docker` directory as otherwise the relative path to the `ros2_ws` will not be found properly:
 
 ```shell-session
-$ bash docker_run.sh
+$ bash docker/docker_run.sh
 ```
+## Debugging if the host cannot see the topics
+
+It might happen that the host system is not seeing the topics published and subscribed to by the Gazebo bridge. The docker environment has been set up to use the same `ROS_DOMAIN_ID` as the host system. If the host system has no `ROS_DOMAIN_ID` defined, this value cannot be copied into the docker environment and as a result, the topics cannot be seen by the host.
+
+If the `ROS_DOMAIN_ID` has been defined properly on the host system, and the topics are still not visible when the docker simulation is running, you might have to modify the DDS profile. For this, create a file inside your home directory inside the `.ros/` directory:
+
+```shell-session
+$ gedit ~/.ros/fastdds.xml
+```
+
+Then, add the following xml configuration into this `fastdds.xml` file and save it.
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+    <transport_descriptors>
+        <transport_descriptor>
+            <transport_id>UdpTransport</transport_id>
+            <type>UDPv4</type>
+        </transport_descriptor>
+    </transport_descriptors>
+
+    <participant profile_name="udp_transport_profile" is_default_profile="true">
+        <rtps>
+            <userTransports>
+                <transport_id>UdpTransport</transport_id>
+            </userTransports>
+            <useBuiltinTransports>false</useBuiltinTransports>
+        </rtps>
+    </participant>
+</profiles>
+```
+
+Next, add the following line to your `.bashrc` file:
+
+```shell
+export FASTRTPS_DEFAULT_PROFILES_FILE=~/.ros/fastdds.xml
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+```
+
+With these configurations, the topics should be visible on the host system.
+
+
 
 ## Roadmap
 The goal is to make this work in an simulated (and simplified) lunar environment as standalone Gazebo simulation that interfaces with ROS 2 Humble. The idea is to use this as a baseline for SLAM and navigation tasks for educational purposes.
