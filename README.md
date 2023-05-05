@@ -2,7 +2,7 @@
 
 Leo Rover simulation using Gazebo Garden with ROS 2 Humble in a Docker container
 
-![Screenshot of the simulation]([thumbnail.png](https://github.com/Dave-van-der-Meer/leorover_gazebo_sim_docker/blob/master/screenshots/thumbnail.png))
+![Screenshot of the simulation](screenshots/thumbnail.png))
 
 ## Description
 This repository contains the files to run a simulation of the Leo Rover using Gazebo Garden with ROS 2 Humble. Since there is no official ROS 2 simulation for the Leo ROver, this repository has been developed. It uses Docker since it makes it easy to run the simulation in any Linux based operating system. Also, it makes it easier to handle the Gazebo simulation, which is a bit more difficult to handle since the latest changes concerning Gazebo and Ignition Gazebo.
