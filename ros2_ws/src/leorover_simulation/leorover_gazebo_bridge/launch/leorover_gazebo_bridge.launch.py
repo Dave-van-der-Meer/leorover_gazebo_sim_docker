@@ -31,7 +31,7 @@ def generate_launch_description():
         ('/leo/realsense_d455/camera_info', '/leo/realsense_d455/camera_info'),
         ('/leo/realsense_d455/image', '/leo/realsense_d455/image'),
         ('/leo/realsense_d455/depth_image', '/leo/realsense_d455/depth_image'),
-        ('/model/leorover/tf','/tf'),
+        ('/model/leorover/tf','/leo/tf'), # Renamed as otherwise, the leorover/odom frame will interfere with SLAM
         ('/world/lunar_landscape/model/leorover/joint_state','/joint_states')
     ]
 
