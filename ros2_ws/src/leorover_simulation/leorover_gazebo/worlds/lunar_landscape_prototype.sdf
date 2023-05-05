@@ -119,6 +119,234 @@
       </link>
     </model>
 
+    <!-- Rocks -->
+    <model name="proto_rock_1">
+      <static>true</static>
+      <pose>1 1 -0.3 0 0 0</pose>
+      <link name='proto_rock_1_link'>
+        <visual name='proto_rock_1_visual'>
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>./meshes/lunar_proto_rock_1_v001.dae</uri>
+            </mesh>
+            </geometry>
+        </visual>
+        <collision name="proto_rock_1_collision">
+              <pose>0 0 0 0 0 0</pose>
+              <geometry>
+              <mesh>
+                  <scale>0.5 0.5 0.5</scale>
+                  <uri>./meshes/lunar_proto_rock_1_v001.dae</uri>
+              </mesh>
+              </geometry>
+          </collision>
+      </link>
+    </model>
+
+    <model name="proto_rock_2">
+      <static>true</static>
+      <pose>-2 2 -0.4 0 0 0</pose>
+      <link name='proto_rock_2_link'>
+        <visual name='proto_rock_2_visual'>
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>./meshes/lunar_proto_rock_1_v001.dae</uri>
+            </mesh>
+            </geometry>
+        </visual>
+        <collision name="proto_rock_2_collision">
+              <pose>0 0 0 0 0 0</pose>
+              <geometry>
+              <mesh>
+                  <scale>0.5 0.5 0.5</scale>
+                  <uri>./meshes/lunar_proto_rock_2_v001.dae</uri>
+              </mesh>
+              </geometry>
+          </collision>
+      </link>
+    </model>
+
+
+    <model name="proto_rock_3">
+      <static>true</static>
+      <pose>3 -5 -0.3 0 0 0</pose>
+      <link name='proto_rock_3_link'>
+        <visual name='proto_rock_3_visual'>
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>./meshes/lunar_proto_rock_1_v001.dae</uri>
+            </mesh>
+            </geometry>
+        </visual>
+        <collision name="proto_rock_3_collision">
+              <pose>0 0 0 0 0 0</pose>
+              <geometry>
+              <mesh>
+                  <scale>0.5 0.5 0.5</scale>
+                  <uri>./meshes/lunar_proto_rock_3_v001.dae</uri>
+              </mesh>
+              </geometry>
+          </collision>
+      </link>
+    </model>
+
+
+    <model name="proto_rock_4">
+      <static>true</static>
+      <pose>12 5 -0.3 0 0 0</pose>
+      <link name='proto_rock_4_link'>
+        <visual name='proto_rock_4_visual'>
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>./meshes/lunar_proto_rock_1_v001.dae</uri>
+            </mesh>
+            </geometry>
+        </visual>
+        <collision name="proto_rock_4_collision">
+              <pose>0 0 0 0 0 0</pose>
+              <geometry>
+              <mesh>
+                  <scale>0.5 0.5 0.5</scale>
+                  <uri>./meshes/lunar_proto_rock_1_v001.dae</uri>
+              </mesh>
+              </geometry>
+          </collision>
+      </link>
+    </model>
+
+    <model name="proto_rock_5">
+      <static>true</static>
+      <pose>-12 -7 -0.3 0 0 0</pose>
+      <link name='proto_rock_5_link'>
+        <visual name='proto_rock_5_visual'>
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>./meshes/lunar_proto_rock_2_v001.dae</uri>
+            </mesh>
+            </geometry>
+        </visual>
+        <collision name="proto_rock_5_collision">
+              <pose>0 0 0 0 0 0</pose>
+              <geometry>
+              <mesh>
+                  <scale>0.5 0.5 0.5</scale>
+                  <uri>./meshes/lunar_proto_rock_2_v001.dae</uri>
+              </mesh>
+              </geometry>
+          </collision>
+      </link>
+    </model>
+
+    <model name="proto_rock_6">
+      <static>true</static>
+      <pose>7 12 -0.3 0 0 0</pose>
+      <link name='proto_rock_6_link'>
+        <visual name='proto_rock_6_visual'>
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <scale>0.75 0.75 0.75</scale>
+                <uri>./meshes/lunar_proto_rock_3_v001.dae</uri>
+            </mesh>
+            </geometry>
+        </visual>
+        <collision name="proto_rock_6_collision">
+              <pose>0 0 0 0 0 0</pose>
+              <geometry>
+              <mesh>
+                  <scale>0.75 0.75 0.75</scale>
+                  <uri>./meshes/lunar_proto_rock_3_v001.dae</uri>
+              </mesh>
+              </geometry>
+          </collision>
+      </link>
+    </model>
+
+    <model name="proto_rock_7">
+      <static>true</static>
+      <pose>6 8 -0.3 0 0 0</pose>
+      <link name='proto_rock_7_link'>
+        <visual name='proto_rock_7_visual'>
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <scale>0.75 0.75 0.75</scale>
+                <uri>./meshes/lunar_proto_rock_1_v001.dae</uri>
+            </mesh>
+            </geometry>
+        </visual>
+        <collision name="proto_rock_7_collision">
+              <pose>0 0 0 0 0 0</pose>
+              <geometry>
+              <mesh>
+                  <scale>0.75 0.75 0.75</scale>
+                  <uri>./meshes/lunar_proto_rock_1_v001.dae</uri>
+              </mesh>
+              </geometry>
+          </collision>
+      </link>
+    </model>
+
+    <model name="proto_rock_8">
+      <static>true</static>
+      <pose>-2 -3 -0.3 0 0 0</pose>
+      <link name='proto_rock_8_link'>
+        <visual name='proto_rock_8_visual'>
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <scale>0.75 0.75 0.75</scale>
+                <uri>./meshes/lunar_proto_rock_2_v001.dae</uri>
+            </mesh>
+            </geometry>
+        </visual>
+        <collision name="proto_rock_8_collision">
+              <pose>0 0 0 0 0 0</pose>
+              <geometry>
+              <mesh>
+                  <scale>0.75 0.75 0.75</scale>
+                  <uri>./meshes/lunar_proto_rock_2_v001.dae</uri>
+              </mesh>
+              </geometry>
+          </collision>
+      </link>
+    </model>
+
+    <model name="proto_rock_9">
+      <static>true</static>
+      <pose>4 3 -0.25 0 0 0</pose>
+      <link name='proto_rock_9_link'>
+        <visual name='proto_rock_9_visual'>
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <scale>1 1 1</scale>
+                <uri>./meshes/lunar_proto_rock_3_v001.dae</uri>
+            </mesh>
+            </geometry>
+        </visual>
+        <collision name="proto_rock_9_collision">
+              <pose>0 0 0 0 0 0</pose>
+              <geometry>
+              <mesh>
+                  <scale>1 1 1</scale>
+                  <uri>./meshes/lunar_proto_rock_3_v001.dae</uri>
+              </mesh>
+              </geometry>
+          </collision>
+      </link>
+    </model>
+
     <!-- Robot -->
     <!-- <include> -->
         <!-- <uri>./leorover.sdf</uri> -->
