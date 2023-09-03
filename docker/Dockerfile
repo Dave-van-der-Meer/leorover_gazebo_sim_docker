@@ -29,7 +29,6 @@ RUN apt update && \
     ros-$ROS_VERSION-actuator-msgs \
     python3-pip && \
     pip install setuptools==58.2.0
-    
 
 # Clean up apt package list
 RUN rm -rf /var/lib/apt/lists/*
@@ -44,8 +43,8 @@ WORKDIR /home/leo
 
 RUN mkdir -p /home/leo/ros2_ws/src/
 WORKDIR /home/leo/ros2_ws/src/
-RUN git clone https://github.com/gazebosim/ros_gz.git
-RUN git clone https://github.com/ros/sdformat_urdf.git
+RUN git clone -b $ROS_VERSION --single-branch https://github.com/gazebosim/ros_gz.git
+RUN git clone -b ros2 --single-branch https://github.com/ros/sdformat_urdf.git
 WORKDIR /home/leo/ros2_ws/
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash; colcon build --symlink-install --executor sequential"
 
