@@ -1,5 +1,7 @@
 #!/bin/bash
 xhost +local:docker
+# Get path to this file to avoid relative paths.
+THIS_REPO=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 ## GUI
 # To enable GUI, make sure processes in the container can connect to the x server
@@ -22,18 +24,20 @@ docker run \
     --rm \
     --network host \
     --ipc host \
+    --pid=host \
     --privileged \
     --env="DISPLAY" \
     --env ROS_DOMAIN_ID=${ROS_DOMAIN_ID} \
     --env IGN_GAZEBO_RESOURCE_PATH=/home/leo/ros2_ws/install/leorover_description/share:/home/leo/ros2_ws/install/ros_gz_sim_demos/share \
     --env GZ_SIM_RESOURCE_PATH=/home/leo/ros2_ws/src/leorover_description:/home/leo/ros2_ws/install/ros_gz_sim_demos/share \
     --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
-    --volume "$PWD/../ros2_ws/src/leorover_simulation:/home/leo/ros2_ws/src/leorover_simulation" \
+    --volume "$THIS_REPO/../ros2_ws/src/leorover_simulation:/home/leo/ros2_ws/src/leorover_simulation" \
     --device /dev/dri/renderD128:/dev/dri/renderD128 \
     --device /dev/dri/renderD129:/dev/dri/renderD129 \
     --name leo_gazebo \
     local/leo_gazebo:humble \
     ros2 launch leorover_gazebo leorover_gazebo_sim.launch.py
+    # ros2 topic pub /chatter std_msgs/msg/String "data: 'Hello'"
     # ros2 launch leorover_gazebo_bridge ros2_control_demo.launch.py
     # --env IGN_GAZEBO_SYSTEM_PLUGIN_PATH=/home/leo/ros2_ws/install/lib${IGN_GAZEBO_SYSTEM_PLUGIN_PATH
 
@@ -55,3 +59,5 @@ docker run \
     # --volume /etc/localtime:/etc/localtime:ro \
     # --volume /home/dave/.ros/fastdds.xml:/home/dave/.ros/fastdds.xml:ro \
     # --gpus all \
+
+    # --pid=host \ #added https://github.com/eProsima/Fast-DDS/issues/2956
