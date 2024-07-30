@@ -12,14 +12,13 @@ RUN apt update && \
     lsb-release \
     wget \
     gnupg\
-    ros-$ROS_VERSION-gazebo-ros \
     vim
 
 # Install Gazebo Garden (binary install: https://gazebosim.org/docs/garden/install_ubuntu)
 RUN wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
 RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 RUN apt update && \
-    apt install -y gz-garden \
+    apt install -y ros-humble-ros-gzharmonic \
     ros-cmake-modules \
     libgflags-dev \
     ros-$ROS_VERSION-gps-msgs \
@@ -44,8 +43,8 @@ WORKDIR /home/leo
 
 RUN mkdir -p /home/leo/ros2_ws/src/
 WORKDIR /home/leo/ros2_ws/src/
-RUN git clone -b $ROS_VERSION --single-branch https://github.com/gazebosim/ros_gz.git
-RUN git clone -b humble --single-branch https://github.com/ros/sdformat_urdf.git
+#RUN git clone -b $ROS_VERSION --single-branch https://github.com/gazebosim/ros_gz.git
+#RUN git clone -b humble --single-branch https://github.com/ros/sdformat_urdf.git
 WORKDIR /home/leo/ros2_ws/
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash; colcon build --symlink-install --executor sequential"
 
